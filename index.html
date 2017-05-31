@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <title>Aurélia Fabre | Webdesigner</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600" rel="stylesheet">
+    
+    <!-- build:css style.min.css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/scss/viewScroller.min.css">
+    <!-- endbuild -->
+    
+    <!-- build:js assets/js/combined.min.js -->
+    <script src="assets/js/jquery-1.8.3.min.js"></script>
+    <script src="assets/js/modernizr.js"></script>
+    <!-- endbuild -->
+    
+</head>
+    
+    <body> 
+        
+        <header class="">
+            
+        </header>
+        
+        <div class="menu">
+            <div class="buttons-section">
+                <a href="#view-1" class="vs-anchor"><button class="btn-own btn-own-changeview raised center">View 1</button></a>
+            </div>
+            <div class="buttons-section">
+                <a href="#view-2" class="vs-anchor"><button class="btn-own btn-own-changeview raised center">View 2</button></a>
+            </div>
+            <div class="buttons-section">
+                <a href="#view-3" class="vs-anchor"><button class="btn-own btn-own-changeview raised center">View 3</button></a>
+            </div>
+            <div class="buttons-section">
+                <a href="#view-4" class="vs-anchor"><button class="btn-own btn-own-changeview raised center">View 4</button></a>
+            </div>
+            <div class="buttons-section">
+                <a href="#view-5" class="vs-anchor"><button class="btn-own btn-own-changeview raised center">View 5</button></a>
+            </div>
+        </div>
+
+
+        <div class="mainbag">
+            <div vs-anchor="view-1" class="mainview view1">
+                <div class="vs-center-wrap">
+                    <div class="vs-center">
+                        <h2>Aurélia Fabre</h2>
+                    </div>
+                </div>
+            </div>
+            <div vs-anchor="view-2" class="mainview view2">
+                <div class="vs-center-wrap">
+                    <a href="#" class="vs-center">
+                        <h2>Had one font</h2>
+                        <img src="assets/img/ipad-hof.png" alt="Ipad Had one font" >
+                    </a>
+                </div>
+            </div>
+            <div vs-anchor="view-3" class="mainview view3">
+                <div class="vs-center-wrap">
+                    <div class="vs-center">
+                        <h2>Music Pleaze</h2>
+                        <img src="assets/img/ipad-hof.png" alt="Ipad Had one font" >
+                    </div>
+                </div>
+            </div>
+            <div vs-anchor="view-4" class="mainview view4">
+                <div class="vs-center-wrap">
+                    <div class="vs-center">
+                        <h2>Reboot factory</h2>
+                        <img src="assets/img/ipad-hof.png" alt="Ipad Had one font" >
+                    </div>
+                </div>
+            </div>
+            <div vs-anchor="view-5" class="mainview view5">
+               <div class="vs-center-wrap">
+                    <div class="vs-center">
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="borders">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+            <div class="right"></div>            
+        </div>
+       
+
+        <footer class="">
+        </footer>
+            
+        <!-- build:js assets/js/app.min.js -->
+        <script src="assets/js/jquery.easing.min.js"></script>
+        <script src="assets/js/jquery.mousewheel.min.js"></script>
+        <script src="assets/js/viewScroller.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- endbuild -->
+        
+        <script>
+        $(document).ready(function() {
+
+            // Sets viewScroller with sample events
+            if (navigator.maxTouchPoints==0){
+                $('.mainbag').viewScroller({
+                useScrollbar: false,
+                beforeChange: function() {
+                    return false; // It means that views change will be terminated
+                },
+                afterChange: function() {
+                },
+                beforeResize: function() {
+                },
+                afterResize: function() {
+                }
+            });}else{
+            
+             $('.mainbag').viewScroller({
+                useScrollbar: true,
+                beforeChange: function() {
+                    return false; // It means that views change will be terminated
+                },
+                afterChange: function() {
+                },
+                beforeResize: function() {
+                },
+                afterResize: function() {
+                }
+            });}
+
+            // Sets start params for MENU
+            $('.mainbag').css({
+                'left': '0px'
+            });
+            $.fn.viewScroller.setSpaceMainBag(0);
+
+
+
+            
+
+        });
+    </script>
+        
+    </body>
+</html>

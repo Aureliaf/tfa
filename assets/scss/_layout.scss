@@ -1,0 +1,67 @@
+/* `Layout
+-------------------------------------------------------------*/
+
+/* view content center */
+
+.vs-center-wrap {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.vs-center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* mainviews */
+
+.mainbag {
+    position: relative; /* for any left/right separation */
+    overflow-y: hidden; /* for jQuery scrolls only */
+    height: 100%;
+    width: 100%; /* if 100% then you can't use left/right separation */
+}
+
+.mainview {
+    position: relative;
+    height: 100%;
+    width: 100%;
+	font-size: 16px;
+    vertical-align: bottom;
+    white-space: normal;
+}
+
+.borders > * {
+    position: fixed;
+    z-index: 2;
+    background: #ffffff;
+}
+
+.borders .top {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40px;  
+}
+
+.borders .bottom {
+    bottom: 0;
+    width: 100vw;
+    height: 40px;
+}
+
+.borders .left {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 40px;
+}
+
+.borders .right {
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 40px;
+}
