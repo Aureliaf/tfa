@@ -1,26 +1,69 @@
 body {
     font-family: $baseFont;
 	font-size: 1.063em;
-	color: #626262;
+	color: $mainColor;
 	line-height: 1.53;
 }
+
+.color1 {color: $fontColor1; }
+.color2 { color: $fontColor2; }
+.color3 {color: $fontColor3; }
 
 /* `Link & btn
 -------------------------------------------------------------*/
 
+
+a {
+    text-decoration: none;
+    color: $mainDark;
+}
 	
 
 /* `Title
 -------------------------------------------------------------*/
 
-h2 {
+h1, h2 {
     color: #ffffff;
     font-size: 10vw;
+    margin: 0 0 30px;
+}
+
+h2 {
     margin: 0 0 140px;
 }
 
-img {
-    position: absolute;
-    top: calc(50% - 70px);
-    left: calc(50% - 205px);
+.type {
+    font-size: 2.5vh;
+    font-weight: 300;
+}
+
+.type span {
+    font-weight: 200;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.logo span{
+    font-size: 16px;
+    font-weight: 200;
+    cursor: default;
+    height: 50px;
+}
+
+.menu {
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.student {
+    /*font-size: 1.4705882353em;*/
+    font-size: 3.5vh;
+    font-weight: 200;
 }
