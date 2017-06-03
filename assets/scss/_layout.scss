@@ -1,7 +1,9 @@
 /* `Layout
 -------------------------------------------------------------*/
 
-
+.hidden {
+    display: none;
+}
 
 /* view content center */
 
@@ -9,6 +11,7 @@
     display: table;
     width: 100%;
     height: 100%;
+    table-layout: fixed;
 }
 
 .vs-center {
@@ -16,6 +19,7 @@
     vertical-align: middle;
     text-align: center;
 }
+
 
 /* mainviews */
 
@@ -27,13 +31,81 @@
 
 .mainview {
     position: relative;
-    height: 100%;
+    height: auto;
     width: 100%;
 	font-size: 16px;
     vertical-align: bottom;
     white-space: normal;
+    
+    @media (min-width: $breakpoint1) {
+        height: 100%;
+    }
 }
 
+/* Views styles */
+
+.header {
+    width: calc(100% - 20px);
+    height: 50px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    
+    @media (min-width: $breakpoint1) {
+        position: absolute;
+    }
+    
+}
+
+.view1 {
+    background: url(assets/img/dots-bg.svg) no-repeat 23px 15px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 23px) calc(100% - 15px) $bgColor1;
+    background-size: auto 20vh;
+    
+    @media (min-width: $breakpoint1) {
+        background: url(assets/img/dots-bg.svg) no-repeat 65px 65px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 65px) calc(100% - 65px) $bgColor1;
+        background-size: auto 20vh;
+    }
+}
+
+
+.view2 {
+    background: url(assets/img/dots-bg.svg) no-repeat 23px 15px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 23px) calc(100% - 15px) $bgColor2;
+    background-size: auto 20vh;
+    
+    @media (min-width: $breakpoint1) {
+        background: url(assets/img/dots-bg.svg) no-repeat 65px 65px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 65px) calc(100% - 65px) $bgColor2;
+        background-size: auto 20vh;
+    }
+}
+
+.view3 {
+    background: url(assets/img/dots-bg.svg) no-repeat 23px 15px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 23px) calc(100% - 15px) $bgColor3;
+    background-size: auto 20vh;
+    
+    @media (min-width: $breakpoint1) {
+        background: url(assets/img/dots-bg.svg) no-repeat 65px 65px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 65px) calc(100% - 65px) $bgColor3;
+        background-size: auto 20vh;
+    }
+}
+
+.view4 {
+    background: url(assets/img/dots-bg.svg) no-repeat 23px 15px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 23px) calc(100% - 15px) $bgColor1;
+    background-size: auto 20vh;
+    
+    @media (min-width: $breakpoint1) {
+        background: url(assets/img/dots-bg.svg) no-repeat 65px 65px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 65px) calc(100% - 65px) $bgColor1;
+        background-size: auto 20vh;
+    }
+}
+
+.view5 {
+    background-color: $bgColor2;
+    
+    @media (min-width: $breakpoint3) {
+        background: url(assets/img/cards-about.png) no-repeat 20% 0 $bgColor2;
+        background-size: auto 84vh;
+    }
+}
 
 /* Borders */
 
@@ -41,43 +113,66 @@
     position: fixed;
     z-index: 2;
     background: #ffffff;
+    
 }
 
 .borders .top {
     top: 0;
     width: 100vw;
     height: 50px;  
+    display: none;
+    
+    @media (min-width: $breakpoint1) {
+        display: block;
+    }
 }
 
 .borders .bottom {
     bottom: 0;
     width: 100vw;
     height: 50px;
+    display: none;
+    
+    @media (min-width: $breakpoint1) {
+        display: block;
+    }
 }
 
 .borders .left {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 50px;
+    width: 10px;
+    
+    @media (min-width: $breakpoint1) {
+        width: 50px;
+    }
 }
 
 .borders .right {
     top: 0;
     right: 0;
     height: 100vh;
-    width: 50px;
+    width: 10px;
+    
+    @media (min-width: $breakpoint1) {
+        width: 50px;
+    }
 }
 
 
 /* Aside elements */
 
 .logo {
-    position: fixed;
-    top: 0;
-    height: 50px;
-    left: 50px;
-    z-index: 4;
+    position: relative;
+    
+    @media (min-width: $breakpoint1) {
+        position: fixed;
+        top: 0;
+        height: 50px;
+        left: 50px;
+        z-index: 4;
+    }
 }
 
 .logo span{
@@ -85,11 +180,15 @@
 }
 
 .menu {
-    position: fixed;
-    right: 50px;
-    z-index: 4;
+    position: relative;
+    float: right;
+    
+    @media (min-width: $breakpoint1) {
+        position: fixed;
+        right: 50px;
+        z-index: 4;
+    }
 }
-
 
 .dotstyle ul {
 	position: fixed;
@@ -100,6 +199,11 @@
     width: 50px;
 	list-style: none;
     z-index: 10;
+    display: none;
+    
+    @media (min-width: $breakpoint1) {
+        display: block;
+    }
 }
 
 .dotstyle li {
@@ -110,7 +214,6 @@
 	height: 10px;
 	cursor: pointer;
 }
-
 
 .dotstyle li a {
 	top: 0;
@@ -127,8 +230,6 @@
 .dotstyle li a:focus {
 	outline: none;
 }
-
-/* Fill in */
 
 .dotstyle-fillin li a {
 	background-color: transparent;
@@ -155,6 +256,11 @@
     margin: 0;
 	list-style: none;
     z-index: 10;
+    display: none;
+    
+    @media (min-width: $breakpoint1) {
+        display: block;
+    }
 }
 
 .socials li {
@@ -180,23 +286,125 @@
 	cursor: pointer;
 }
 
+
+
+
+/* Homepage */
+
 .student {
-    position: absolute;
-    left: 85px;
-    bottom: 75px;
-    margin: 0;
+    @media (min-width: $breakpoint1) {
+        position: absolute;
+        left: 85px;
+        bottom: 75px;
+        margin: 0;
+    }
+    
 }
 
 .type {
+    @media (min-width: $breakpoint1) {
+        position: absolute;
+        left: 85px;
+        bottom: 75px;
+        margin: 0;
+    }
+}
+
+.center-img {
     position: absolute;
-    left: 85px;
-    bottom: 75px;
-    margin: 0;
+    width: 75%;
+    top: 27%;
+    left: 12.5%;
+    
+    @media (min-width: $breakpoint2) {
+        width: 33%;
+        top: calc(50% - 150px);
+        left: 34%;
+    }
+    
+    @media (min-width: $breakpoint1) {
+        top: calc(50% - 70px);
+    }
+}
+
+.left-img {
+    width: 388px;
+    height: auto;
+    position: absolute;
+    left: 12%;
+}
+
+.text-table {
+    display: table;
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    
+    @media (min-width: $breakpoint2) {
+        max-width: 388px;
+    }
+    
+    @media (min-width: $breakpoint3) {
+        margin: 0;
+        padding-left: calc(50% + 112px);
+    }
+}
+
+.text-about {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 
-img {
-    position: absolute;
-    top: calc(50% - 70px);
-    left: calc(50% - 205px);
+.margin-b {
+    margin-bottom: 15px;
+}
+
+.credits {
+    @media (min-width: $breakpoint1) {
+        position: fixed;
+        bottom: 0;
+        left: calc(50% - 120px);
+        z-index: 10;
+    }
+}
+
+.credits a {
+    margin: 0 12px;
+}
+
+
+/* Footer */
+
+.footer {
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    
+    @media (min-width: $breakpoint1) {
+        display: none;
+    }
+}
+
+.socials-footer ul {
+	list-style: none;
+    width: 109px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.socials-footer li {
+    padding: 8px;
+    display: inline-block;
+	cursor: pointer;
+}
+
+.socials-footer img {
+    width: 17px;
+	height: 17px;
+	display: block;
+	cursor: pointer;
 }

@@ -29,7 +29,9 @@ $fontColor1: #927faf;/* purple */
 $fontColor2: #d490c3; /* pink */
 $fontColor3: #749ea7; /* blue */
 
-
+$breakpoint1: 750px;
+$breakpoint2: 460px;
+$breakpoint3: 1180px;
 
 @import "reset";
 @import 'type';
@@ -40,32 +42,7 @@ $fontColor3: #749ea7; /* blue */
 
 
 
-/* Views styles */
 
-.view1 {
-    background: url(assets/img/dots-bg.svg) no-repeat 65px 65px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 65px) calc(100% - 65px) $bgColor1;
-    background-size: auto 20vh;
-}
-
-
-.view2 {
-    background: url(assets/img/dots-bg.svg) no-repeat 65px 65px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 65px) calc(100% - 65px) $bgColor2;
-    background-size: auto 20vh;
-}
-
-.view3 {
-    background: url(assets/img/dots-bg.svg) no-repeat 65px 65px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 65px) calc(100% - 65px) $bgColor3;
-    background-size: auto 20vh;
-}
-
-.view4 {
-    background: url(assets/img/dots-bg.svg) no-repeat 65px 65px, url(assets/img/dots-bg.svg) no-repeat calc(100% - 65px) calc(100% - 65px) $bgColor1;
-    background-size: auto 20vh;
-}
-
-.view5 {
-    background-color: $bgColor2;
-}
 
 
 
