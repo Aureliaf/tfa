@@ -1,22 +1,3 @@
-
-/*
-	1— mettre en place l'environnement gulp
-	2— ajouter la structure à l'html
-	3- convertir le css en sass avec les principes suivant:
-	import, variables, nesting, color functions (https://robots.thoughtbot.com/controlling-color-with-sass-color-functions)
-*/
-
-
-
-
-/* 
-@import "font";
-@import "layout";
-@import "form";
-@import "animation";
-@import "media";
-*/
-
 $baseFont: 'Montserrat', sans-serif;
 $mainColor: #626262;
 $mainDark: #333333;
