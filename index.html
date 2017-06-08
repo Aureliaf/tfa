@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="page" lang="fr">
+<html id="page" lang="en">
     
     <head>
         <title>Aurélia Fabre | Webdesigner</title>
@@ -8,11 +8,14 @@
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="pinterest" content="nopin" />
+        <link rel="icon" href="assets/img/favicon.png" />
+        
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600" rel="stylesheet">
 
         <!-- build:css style.min.css -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" type="text/css" href="assets/scss/viewScroller.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/scss/hugrid.css"/>
         <!-- endbuild -->
 
         <!-- build:js assets/js/combined.min.js -->
@@ -24,8 +27,55 @@
     
     <body> 
         
+        <nav class="nav">
+            <a href="#" class="close"><img src="assets/img/close.svg" alt="Close menu" ></a>
+            <div class="container">
+                <ul class="nav__list">
+                    <li class="nav__list--el home">
+                        <a href="index.html">Home</a>
+                        <div class="color-home"></div>
+                    </li>
+                    <li class="nav__list--el projects-link"><a href="#view-2">Projects</a></li>
+                    <li class="nav__projects--el hadonefont">
+                        <a href="hadonefont.html">Had one font</a>
+                        <div class="color-hof">
+                        <svg class="fill__home fill__home--h" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.6 115.8">
+                            <g fill="none">
+                                <polyline opacity="6.000000e-002" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="19.1,38.9 19.1,1.1 1.2,1.2 1.2,48.7 76.3,48.7 76.3,1.2 94.4,1.2 94.4,114.8 76.3,114.8 76.3,64.7 1.2,64.7 1.2,114.8 19.1,114.8 19.1,75.8"/>
+                            </g>
+                        </svg>
+                        </div>
+                    </li>
+                    <li class="nav__projects--el musicplz">
+                        <a href="musicpleaze.html">Music pleaze</a>
+                        <div class="color-musicplz">
+                            <svg class="fill__home fill__home--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116.3 116">
+                                <g fill="none">
+                                    <polyline opacity="6.000000e-002" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="63.5,60.6 95.7,1.3 114.9,1.3 114.9,114.9 96.8,114.9 96.8,33.2 67,87.8 20.5,1.3 1.3,1.3 1.3,114.9 19.2,114.9 19.2,33.2 49.4,88.4"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="nav__projects--el rebootf">
+                        <a href="rebootfactory.html">Reboot factory</a>
+                        <div class="color-rebootf">
+                            <svg class="fill__home fill__home--r" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.9 117.9">
+                                <g fill="none">
+                                    <path opacity="6.000000e-002" fill="none" stroke="#000000" stroke-width="2.0214" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M19.6,51.4V17.6l32.2,0c0,0,16,2.9,16.5,20.9c0.5,18-12.5,21.5-14.3,22s-52.5,0-52.5,0v-59h53c0,0,28.8,5.1,32.1,33.4s-20.5,36.9-22,37.8c26.9,43.8,26.9,43.8,26.9,43.8H71l-24.9-40H19.6v40H1.5v-40"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="nav__list--el about">
+                        <a href="#view-5">About</a>
+                        <div class="color-about"></div>  
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
         <header class="header">
-            <a href="index.html" class="logo logo--home">AF<span></span></a>
+            <a href="index.html" class="logo logo--home">AF<span id="span"></span></a>
             <a href="#" class="menu menu--home">Menu</a>
         </header>
         
@@ -59,7 +109,7 @@
 
 
         <div class="mainbag">
-            <div vs-anchor="view-1" class="mainview view1">
+            <div id="view-1" data-anchor="view-1" class="mainview view1">
                 <div class="vs-center-wrap">
                     <div class="vs-center">
                         <h1>Aurélia Fabre</h1>
@@ -102,13 +152,13 @@
                         <p>I’m currently studying web design at Albert Jacquard School in Belgium and I’m looking for an internship to improve my skills.</p>
                         <p>I like paying attention to every small detail, imagining new stuff and trying to make users happy.</p>
                         <p class="margin-b">Feel free to contact me !</p>
-                        <button class="button type2">fabrea83@gmail.com</button>
+                        <a href="mailto:fabrea83@gmail.com" ><div class="button type2">fabrea83@gmail.com</div></a>
                     </div>
                 </div>
                 
             </div>
         </div>
-        <div class="credits hidden"><a href="http://dwm.re/">heaj 2017</a>-<a href="#">404</a>-<a  href="#">credits</a></div>
+        <div class="credits hidden"><a href="http://dwm.re/" target=”_blank”>heaj 2017</a>-<a href="erreur404.html">404</a>-<a href="#">credits</a></div>
         
         <div class="borders">
             <div class="top"></div>
@@ -125,7 +175,7 @@
                     <li><a href="https://twitter.com/AureliaFabre" target=”_blank”><img src="assets/img/twitter-logo.svg" alt="Twitter logo" ></a></li>
                 </ul>
             </div>
-            <div class="credits-footer"><a href="#" target=”_blank”>heaj 2017</a>-<a href="#">404</a>-<a  href="#">credits</a></div>
+            <div class="credits-footer"><a href="http://dwm.re/" target=”_blank”>heaj 2017</a>-<a href="erreur404.html">404</a>-<a  href="#">credits</a></div>
         </footer>
             
         <!-- build:js assets/js/app.min.js -->
@@ -135,90 +185,171 @@
         <script src="assets/js/app.js"></script>
         <!-- endbuild -->
         
+        <script src="assets/js/hugrid.js"></script>
+        
         <script>
-        $(document).ready(function() {
+            var nav = document.querySelector(".nav");
             
-            // Sets viewScroller with sample events
-            if (navigator.maxTouchPoints==0){
-                $('.mainbag').viewScroller({
-                useScrollbar: false,
-                beforeChange: function() {
-                    return false; // It means that views change will be terminated
-                },
-                afterChange: function() {
-                    var currentHash = location.hash;
-                    var dot1 = document.getElementById("dot1");
-                    var dot2 = document.getElementById("dot2");
-                    var dot3 = document.getElementById("dot3");
-                    var dot4 = document.getElementById("dot4");
-                    var dot5 = document.getElementById("dot5");
-                    var credits = document.querySelector(".credits");
-                     
-                    if (currentHash == "#view-1") {
-                        dot1.classList.add("current");
-                        dot2.classList.remove("current");
-                        dot3.classList.remove("current");
-                        dot4.classList.remove("current");
-                        dot5.classList.remove("current");
-                    }
-                    if (currentHash == "#view-2") {
-                        dot1.classList.remove("current");
-                        dot2.classList.add("current");
-                        dot3.classList.remove("current");
-                        dot4.classList.remove("current");
-                        dot5.classList.remove("current");
-                    }
-                    if (currentHash == "#view-3") {
-                        dot1.classList.remove("current");
-                        dot2.classList.remove("current");
-                        dot3.classList.add("current");
-                        dot4.classList.remove("current");
-                        dot5.classList.remove("current");
-                    }
-                    if (currentHash == "#view-4") {
-                        dot1.classList.remove("current");
-                        dot2.classList.remove("current");
-                        dot3.classList.remove("current");
-                        dot4.classList.add("current");
-                        dot5.classList.remove("current");
-                    }
-                    if (currentHash == "#view-5") {
-                        dot1.classList.remove("current");
-                        dot2.classList.remove("current");
-                        dot3.classList.remove("current");
-                        dot4.classList.remove("current");
-                        dot5.classList.add("current");                       
-                    }
-                    
-                    if (currentHash != "#view-5") {
-                        credits.classList.add("hidden");
-                    } else {
-                        credits.classList.remove("hidden");
-                    }
-                },
-                beforeResize: function() {
-                },
-                afterResize: function() {
-                }
-            });}else{
-            
-             $('.mainbag').viewScroller({
-                useScrollbar: true,
-                beforeChange: function() {
-                    return false; // It means that views change will be terminated
-                },
-                afterChange: function() {
-                }
-            });}
-
-            // Sets start params for MENU
-            $('.mainbag').css({
-                'left': '0px'
+            document.querySelector(".menu").addEventListener("click", function() {
+                nav.classList.add("nav--open");
             });
-            $.fn.viewScroller.setSpaceMainBag(0);
-        });
             
-    </script>
+            document.querySelector(".close").addEventListener("click", function() {
+                nav.classList.remove("nav--open");
+            });
+            
+            document.querySelector(".home").addEventListener("click", function() {
+                nav.classList.remove("nav--open");
+            });
+            
+            document.querySelector(".projects-link").addEventListener("click", function() {
+                nav.classList.remove("nav--open");
+            });
+            
+            document.querySelector(".about").addEventListener("click", function() {
+                nav.classList.remove("nav--open");
+            });
+            
+            definegrid = function() {
+                var browserWidth = $(window).width(); 
+                if (browserWidth >= 1001) 
+                {
+                    pageUnits = 'px';
+                    colUnits = 'px';
+                    pagewidth = 1200;
+                    columns = 12;
+                    columnwidth = 81.7;
+                    gutterwidth = 20;
+                    pagetopmargin = 0;
+                    rowheight = 20;
+                    gridonload = 'off';
+                    makehugrid();
+                } 
+                if (browserWidth <= 1000) 
+                {
+                    pageUnits = '%';
+                    colUnits = '%';
+                    pagewidth = 90;
+                    columns = 4;
+                    columnwidth = 24;
+                    gutterwidth = 2;
+                    pagetopmargin = 35;
+                    rowheight = 20;
+                    gridonload = 'off';
+                    makehugrid();
+                }
+                if (browserWidth <= 768) 
+                {
+                    pageUnits = '%';
+                    colUnits = '%';
+                    pagewidth = 90;
+                    columns = 2;
+                    columnwidth = 49;
+                    gutterwidth = 2;
+                    pagetopmargin = 0;
+                    rowheight = 20;
+                    gridonload = 'off';
+                    makehugrid();
+                }
+            }
+
+            $(window).resize(function() {
+                definegrid();
+                setgridonresize();
+            });
+            
+            $(document).ready(function() {
+                definegrid();
+                setgridonload();
+
+                // Sets viewScroller with sample events
+                if (navigator.maxTouchPoints==0){
+                    $('.mainbag').viewScroller({
+                    useScrollbar: false,
+                    beforeChange: function() {
+                        return false; // It means that views change will be terminated
+                    },
+                    afterChange: function() {
+                        var currentHash = location.hash;
+                        var dot1 = document.getElementById("dot1");
+                        var dot2 = document.getElementById("dot2");
+                        var dot3 = document.getElementById("dot3");
+                        var dot4 = document.getElementById("dot4");
+                        var dot5 = document.getElementById("dot5");
+                        var credits = document.querySelector(".credits");
+                        var span = document.querySelector("#span");
+
+                        if (currentHash == "#view-1") {
+                            dot1.classList.add("current");
+                            dot2.classList.remove("current");
+                            dot3.classList.remove("current");
+                            dot4.classList.remove("current");
+                            dot5.classList.remove("current");
+                            span.innerHTML = " ";
+
+                        }
+                        if (currentHash == "#view-2") {
+                            dot1.classList.remove("current");
+                            dot2.classList.add("current");
+                            dot3.classList.remove("current");
+                            dot4.classList.remove("current");
+                            dot5.classList.remove("current");
+                            span.innerHTML = "my_projects";
+                        }
+                        if (currentHash == "#view-3") {
+                            dot1.classList.remove("current");
+                            dot2.classList.remove("current");
+                            dot3.classList.add("current");
+                            dot4.classList.remove("current");
+                            dot5.classList.remove("current");
+                            span.innerHTML = "my_projects";
+                        }
+                        if (currentHash == "#view-4") {
+                            dot1.classList.remove("current");
+                            dot2.classList.remove("current");
+                            dot3.classList.remove("current");
+                            dot4.classList.add("current");
+                            dot5.classList.remove("current");
+                            span.innerHTML = "my_projects";
+                        }
+                        if (currentHash == "#view-5") {
+                            dot1.classList.remove("current");
+                            dot2.classList.remove("current");
+                            dot3.classList.remove("current");
+                            dot4.classList.remove("current");
+                            dot5.classList.add("current");
+                            span.innerHTML = "about_me";
+                        }
+
+                        if (currentHash != "#view-5") {
+                            credits.classList.add("hidden");
+                        } else {
+                            credits.classList.remove("hidden");
+                        }
+                    },
+                    beforeResize: function() {
+                    },
+                    afterResize: function() {
+                    }
+                });}else{
+
+                 $('.mainbag').viewScroller({
+                    useScrollbar: true,
+                    beforeChange: function() {
+                        return false; // It means that views change will be terminated
+                    },
+                    afterChange: function() {
+                    }
+                });}
+
+                // Sets start params for MENU
+                $('.mainbag').css({
+                    'left': '0px'
+                });
+                $.fn.viewScroller.setSpaceMainBag(0);
+            });
+            
+        </script>
 
     </body>
 </html>

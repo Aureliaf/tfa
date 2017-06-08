@@ -32,7 +32,7 @@ button {
     cursor: pointer;
     outline: none;
     width: 200px;
-    margin: 40px 0 0 calc(50% - 105px);
+    margin: 40px auto 0;
     position: relative;
     
     &.type2 {
@@ -64,7 +64,12 @@ button {
 }
 
 .button--case {
-    margin: 45px 0 100px calc(50% - 105px);
+    margin: 45px auto 100px;
+}
+
+.button--erreur {
+    width: 160px;
+    margin: 30px auto 0;
 }
 	
 
@@ -104,7 +109,7 @@ h3, h4 {
 }
 
 h4 {
-    font-size: 35px;
+    font-size: 2.0588235294em;
     color: $mainColor;
     text-align: center;
     
@@ -123,29 +128,34 @@ h4::after {
 }
 
 h5 {
-    font-size: 35px;
+    font-size: 2.0588235294em;
     font-weight: 500;
     margin: 0 0 45px;
 }
+
+.titre-404 {
+    font-size: 15vh;
+    margin: 0;
+}
+
 
 /* Homepage
 -------------------------------------------------------------*/
 
 .logo {
-    font-size: 17px;
+    font-size: 1em;
     font-weight: 600;
     line-height: 50px;
 }
 
 .logo span{
-    font-size: 16px;
+    font-size: 0.9411764706em;
     font-weight: 200;
     cursor: default;
-    height: 50px;
 }
 
 .menu {
-    font-size: 14px;
+    font-size: 0.8235294118em;
     line-height: 50px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -153,13 +163,12 @@ h5 {
 }
 
 .type {
-    font-size: 18px;
+    font-size: 1.0588235294em;
     font-weight: 300;
     
     @media (min-width: $breakpoint2) {
         font-size: 2.5vh;
     }
-    
 }
 
 .type span {
@@ -173,7 +182,7 @@ h5 {
 }
 
 
-/* Texte présentation */
+/* Textes paragraphes */
 
 p {
     margin: 0 0 30px;
@@ -203,6 +212,8 @@ p {
 .text--intro {
     margin-bottom: 150px;
 }
+
+
 
 
 

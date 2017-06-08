@@ -4,6 +4,8 @@
  * Version: 2.1.1
  * Copyright (c) 2016 Marcin Gierczak
  * http://www.viewdesic.com
+ 
+ Attention ce plugin a été modifié !
  * =================================================
  */
 
