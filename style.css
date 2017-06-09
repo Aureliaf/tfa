@@ -532,6 +532,10 @@ h5 {
   font-size: 15vh;
   margin: 0; }
 
+.titre-credits {
+  font-size: 1.404em;
+  margin: 0 0 30px 0; }
+
 /* Homepage
 -------------------------------------------------------------*/
 .logo {
@@ -1256,6 +1260,45 @@ p {
 .design__el--wireframes {
   margin-right: 0;
   margin-bottom: 0; }
+
+/* Page credits
+-------------------------------------------------------------*/
+.links {
+  padding-top: 25%; }
+  @media (max-width: 750px) {
+    .links {
+      display: block;
+      max-width: 491px;
+      margin: 0 auto; } }
+
+.links__el {
+  width: 184px;
+  display: block;
+  margin: 0 auto;
+  vertical-align: top;
+  margin-bottom: 80px; }
+  @media (min-width: 995px) {
+    .links__el {
+      display: inline-block;
+      margin-left: 116px;
+      margin-bottom: 0; } }
+
+@media (min-width: 995px) {
+  .links__el:first-child {
+    margin-left: 103px; } }
+
+.links__el:last-child {
+  padding-bottom: 50px; }
+  @media (min-width: 980px) {
+    .links__el:last-child {
+      padding-bottom: 0; } }
+
+.links__el ul {
+  list-style: none;
+  padding-left: 0; }
+
+.links__el li {
+  margin-bottom: 20px; }
 
 /* `Animation
 -------------------------------------------------------------*/

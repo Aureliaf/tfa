@@ -151,7 +151,7 @@
             subbag_sel = '.subbag', // subbag class
             mainview_sel = '.mainview', // mainview class
             subview_sel = '.subview', // subview class
-            anchor_sel = '.vs-anchor', // Any anchor class
+            anchor_sel = '.data-anchor', // Any anchor class
             active_sel = '.vs-active', // Active view class
             center_sel = '.vs-center', // Any content class inside a view
             subviewprev_sel = '.vs-subview-prev', // Class for the element which changes current subview to the previous subview
@@ -280,7 +280,7 @@
 
         // Gets view name
         var getViewName = function(mainViewNbr, view) {
-            var viewId = '#' + view.attr('vs-anchor');
+            var viewId = '#' + view.attr('data-anchor');
             if (viewId === '#undefined') {
                 viewId = '';
             }
@@ -330,9 +330,9 @@
             if (window.location.hash.indexOf('#') > -1) {
                 urlViewName = window.location.hash.replace('#', '');
                 var subviews = [],
-                    anchor_sel = 'div[vs-anchor=' + urlViewName + '], section[vs-anchor=' + urlViewName + '], article[vs-anchor=' + urlViewName + ']';
+                    anchor_sel = 'div[data-anchor=' + urlViewName + '], section[data-anchor=' + urlViewName + '], article[data-anchor=' + urlViewName + ']';
                 sel.get(anchor_sel).find(sel.get(getallsubviews_sel)).each(function(idx) {
-                    subviews.push($(this).attr('vs-anchor'));
+                    subviews.push($(this).attr('data-anchor'));
                 });
                 if (subviews.length > 0) {
                     return getBagNbr(subviews[0]);
@@ -587,7 +587,7 @@
         var setActiveView = function() {
             sel.get(mainbag_sel).find(sel.get(active_sel)).each(function(viewNbr) {
                 if (viewNbr === 0) {
-                    setHash($(this).attr('vs-anchor'));
+                    setHash($(this).attr('data-anchor'));
                 }
             });
         };
@@ -835,7 +835,7 @@
         // START REGION EVENTS
         // ----------------------------------------
 
-        // Adds click event to all anchors with 'vs-anchor' class declared
+        // Adds click event to all anchors with 'data-anchor' class declared
         var bindAnchor = function() {
             // If user click on this element, application will search for id of the anchor among all views inside all bag objects and for this id change view
             sel.get(anchor_sel).on('click', onAnchor);
