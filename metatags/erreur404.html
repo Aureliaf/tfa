@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>Page 404 | Aurélia Fabre | Webdesigner</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="description" content="Sorry, there is nothing to see here." />
+        <meta name="keywords" content="aurélia, fabre, webdesigner, student, error" />
+        <meta name="pinterest" content="nopin" />
+        <link rel="icon" href="assets/img/favicon.png" />
+        <meta property="og:title" content="Page 404 | Aurélia Fabre | Webdesigner">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="http://aureliafabre.be/erreur404.html">
+        <meta property="og:image" content="http://aureliafabre.be/assets/img/profil.jpg">
+        <meta property="og:description" content="Sorry, there is nothing to see here.">
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600" rel="stylesheet">
+
+        <link rel="stylesheet" href="http://aureliafabre.be/style.min.css">
+        
+        <script src="assets/js/combined.min.js"></script>
+        
+    </head>
+    
+    <body> 
+        <div class="mainbag">
+            <div class="mainview view6">
+                <div class="vs-center-wrap">
+                    <div class="vs-center">
+                        <h1 class="titre-404">404</h1>
+                        <p class="container text text--center">Sorry, there is nothing to see here.</p>
+                        <a href="index.html"><div class="button button--erreur type2">Go back home</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="borders">
+            <div class="top top--erreur"></div>
+            <div class="bottom bottom--erreur"></div>
+            <div class="left"></div>
+            <div class="right"></div>            
+        </div>
+
+        <script src="assets/js/hugrid.js"></script>
+        <script>
+            definegrid = function() {
+                var browserWidth = $(window).width(); 
+                if (browserWidth >= 1001) 
+                {
+                    pageUnits = 'px';
+                    colUnits = 'px';
+                    pagewidth = 1200;
+                    columns = 12;
+                    columnwidth = 81.7;
+                    gutterwidth = 20;
+                    pagetopmargin = 0;
+                    rowheight = 20;
+                    gridonload = 'off';
+                    makehugrid();
+                } 
+                if (browserWidth <= 1000) 
+                {
+                    pageUnits = '%';
+                    colUnits = '%';
+                    pagewidth = 90;
+                    columns = 4;
+                    columnwidth = 24;
+                    gutterwidth = 2;
+                    pagetopmargin = 35;
+                    rowheight = 20;
+                    gridonload = 'off';
+                    makehugrid();
+                }
+                if (browserWidth <= 768) 
+                {
+                    pageUnits = '%';
+                    colUnits = '%';
+                    pagewidth = 90;
+                    columns = 2;
+                    columnwidth = 49;
+                    gutterwidth = 2;
+                    pagetopmargin = 0;
+                    rowheight = 20;
+                    gridonload = 'off';
+                    makehugrid();
+                }
+            }
+            $(document).ready(function() {
+                definegrid();
+                setgridonload();
+            });    
+
+            $(window).resize(function() {
+                definegrid();
+                setgridonresize();
+            });
+        </script>
+    </body>
+</html>
